@@ -6,7 +6,12 @@ from preprocessing import preprocess_face
 from classifier import analyze_emotions
 from visualizer import draw_results
 
-def run_webcam(frame_skip=3, save_dir="screenshots"):
+# cd ~/Desktop/project_ai
+# source ~/venv/bin/activate
+# python3 main.py --mode webcam
+
+
+def run_webcam(frame_skip=15, save_dir="screenshots"):
     os.makedirs(save_dir, exist_ok=True)
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
